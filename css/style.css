@@ -1,10 +1,13 @@
 body {
-    background: linear-gradient(to right, #e6dace 0%, #e6dace 40%, white 40%, white 100%);
+    background: linear-gradient(to right, #e6dace 0%, #e6dace 50%, white 50%, white 100%);
     font-family: Poppins, sans-serif;
     margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header{
-    margin-top: 0;
+    position: inherit;
+    top: 0;
     padding: 10px;
     width: 100%;
     background-color: white;
@@ -36,6 +39,8 @@ body {
 }
 .nav_links{
     list-style: none;
+    padding: 10px;
+    overflow: hidden;
 }
 .nav_links li a{
     text-decoration: none;
@@ -140,15 +145,15 @@ span{
     color: black;
 }
 footer{
+    overflow: hidden;
+    position: relative;
     padding: 8px;
     background-color: white;
     width: 100%;
     max-height: min-content;
-    margin-bottom: 0;
-    bottom: 0%;
     display: flex;
     justify-content: space-between;
-    align-items: first baseline;
+    align-items: baseline;
     font-size: 10px;
 }
 
@@ -172,9 +177,16 @@ footer li h6{
     font-size: 10px;
     display: inline-flex;
 }
+.connect a{
+    text-decoration: none;
+    color: black;
+}
 .connect{
-    align-items: baseline;
-    margin-right: 20px;
     display: flex;
-    bottom: 0;
+    justify-content: baseline;
+}
+.sizedbox{
+    width: 100%;
+    background-color: transparent;
+    height: 50px;
 }
