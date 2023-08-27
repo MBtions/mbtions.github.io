@@ -1,0 +1,107 @@
+body{
+    background-color: #e6dace;
+    margin: auto;
+    width: 70%;
+    font-family: Poppins, sans-serif;
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    width: 70%;  
+    top: 10px;  
+}
+header h1 {
+    display: inline-flex;
+    padding: 10px;
+}
+.square{
+    display: inline-flex;
+    height: 20px;
+    width: 20px;
+    max-width: 30px;
+    background: #0050ff;    
+}
+.sizedbox{
+    width: 100%;
+    background-color: transparent;
+    height: 50px;
+}
+.container-box{
+    position: relative;
+    margin: auto;
+    background-color: white;
+    height: fit-content;
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    box-shadow: 0px 10px 18px 18px rgba(100, 100, 100, 0.1);
+}
+input{
+    border-radius: 8px;
+    display: inline;
+    border: solid #e6dace 1px ;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+}
+textarea{
+    border: none;
+    border-bottom: solid black 1px;
+    border: solid #e6dace 1px ;
+    border-radius: 8px;
+}
+textarea:hover{
+    cursor: pointer;    
+    border-bottom:solid #0050ff 3px;
+    transition: all .2s ease-in-out;
+}
+textarea:focus{
+    border: #0050ff;  
+}
+button{
+    border: #0050ff;
+    background-color: #0050ff;
+    color: white;
+    border-radius: 30px;
+    padding: 3px 20px;
+    text-transform: uppercase;
+    font-size: medium;
+    font-family: Poppins, sans-serif;
+}
+label{
+    font-size: medium;
+    font-weight: 500;
+    display: inline;
+    padding: 10px;
+}
+form span{
+    color: #0050ff;
+    padding: 1px;
+    font-weight: bolder;
+}
+input:hover{
+    cursor: pointer;
+    border-bottom:solid #0050ff 3px;
+    transition: all .2s ease-in-out;
+}
+input:focus{
+    border: #0050ff;  
+}
+input:active{
+    transform: scale(1.2);
+}
+/* *:required{
+    /* border-color: goldenrod; 
+} */
+/* input:required:invalid {
+    border-color: #ff0000;
+  } */
+#fname, #lname, #email, #subject, #message {
+    position: relative;
+    margin: auto;
+}

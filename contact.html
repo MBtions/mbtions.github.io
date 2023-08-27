@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="./css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="head_title">
+        <div class="square"></div>
+        <h1>Let's talk</h1>
+    </header>
+    <div class="container-box">
+        <form action="/action_page.php">
+            <label for="fname">First Name<span>*</span>:</label><br>
+            <input type="text" id="fname" name="firstname" required><br>
+            <label for="lname">Last Name<span>*</span>:</label><br>            
+            <input type="text" id="lname" name="lastname" required><br>
+            <label for="email">Email Address<span>*</span>:</label><br>
+            <input type="text" id="email" name="emailaddress" required><br>
+            <label for="subject">Subject</label><br>
+            <input type="text" id="subject" name="subject"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" style="height:200px; width:450px;" ></textarea><br>
+            <button type="submit" value="Submit">Send</button>
+            <!-- <p>Your message has been sent! We will get back to you within 2 business days.</p> -->
+        </form>
+    </div>
+    <div class="sizedbox"></div>
+</body>
+</html>
