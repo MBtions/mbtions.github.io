@@ -1,8 +1,10 @@
 body{
     background-color: #e6dace;
+    font-family: Poppins, sans-serif;
     margin: auto;
     width: 100%;
-    font-family: Poppins, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header{
     position: inherit;
@@ -104,6 +106,8 @@ textarea{
     border-bottom: solid black 1px;
     border: solid #e6dace 1px ;
     border-radius: 8px;
+    width: 100%;
+    height: 300px;
 }
 textarea:hover{
     cursor: pointer;    

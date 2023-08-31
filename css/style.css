@@ -2,6 +2,7 @@ body {
     background: linear-gradient(to right, #e6dace 0%, #e6dace 50%, white 50%, white 100%);
     font-family: Poppins, sans-serif;
     margin: auto;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }

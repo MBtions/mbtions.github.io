@@ -1,8 +1,13 @@
-body{
+body {
     background-color: #e6dace;
     font-family: Poppins, sans-serif;
     margin: auto;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#index{
+    background: linear-gradient(to right, #e6dace 0%, #e6dace 50%, white 50%, white 100%);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -17,6 +22,12 @@ body{
     justify-content: space-between;
     text-transform: uppercase;
 }
+.header .square{
+    display: inline-flex;
+    height: 15px;
+    width: 15px;
+    background: #0050ff;    
+}
 .logo{
     display: flex;
     align-items: center;
@@ -27,15 +38,12 @@ body{
 .logo span{
     font-size: small;
     font-weight: 200;
-    letter-spacing: 1px; 
-    padding-top: 10px;  
-    padding-bottom: 10px; 
 }
 .logo h2{
     padding-left: 5px;
     display: inline-flex;
 }
-.header .square{
+.square{
     display: inline-flex;
     height: 15px;
     width: 15px;
@@ -83,8 +91,10 @@ header h1 {
     width: 83%;
 }
 .buttons {
+    text-transform: uppercase;
     display: inline;
     border: solid black 2px;
+    /* color: #0050ff; */
     color: black;
     padding: 2px 8px;
     font-size: small;
@@ -110,6 +120,86 @@ header h1 {
     width: 100%;
     background-color: transparent;
     height: 50px;
+}
+.container{
+    z-index: 1;
+    position: relative;
+    margin: auto;
+    top: 20px;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgba(100, 100, 100, 0.2);
+}
+.profile img{
+    border-radius: 50%;
+    padding: 20px 0px 10px 0px;
+}
+.profile{
+    flex: 1;
+    position: inherit;
+    margin: auto;
+    max-width: 80%;
+    background-color: #f4ece6;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.profile h2{
+    text-align: center;
+    padding: 10px;
+    padding-top: 0;
+}
+.horizontal{
+    position: relative;
+    top: 0;
+    margin: auto;
+    padding: 1px;
+    height: 0px;
+    width: 60px;
+    background-color: #0050ff;
+    display: block;
+}
+span{
+    letter-spacing: 1px; 
+    padding-top: 10px;  
+    padding-bottom: 10px; 
+}
+#hello{
+    font-size: xx-large;
+}
+.about_me{
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.socials{
+    margin: auto;
+    width: 100%;
+    background: white;
+    padding: 0;
+}
+.socials ul{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.socials li{
+    display: block;
+    float: left;
+    padding: 5px;
+    margin: 0;
 }
 .container-box{
     background-color: white;
@@ -173,4 +263,70 @@ footer ul li{
 }
 .connect li h6{
     font-size: 10px;
+}
+input{
+    border-radius: 8px;
+    display: inline;
+    border: solid #e6dace 1px ;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+}
+textarea{
+    border: none;
+    border-bottom: solid black 1px;
+    border: solid #e6dace 1px ;
+    border-radius: 8px;
+    width: 100%;
+    height: 300px;
+}
+textarea:hover{
+    cursor: pointer;    
+    border-bottom:solid #0050ff 3px;
+    transition: all .2s ease-in-out;
+}
+textarea:focus{
+    border: #0050ff;  
+}
+button{
+    border: #0050ff;
+    background-color: #0050ff;
+    color: white;
+    border-radius: 30px;
+    padding: 3px 20px;
+    text-transform: uppercase;
+    font-size: medium;
+    font-family: Poppins, sans-serif;
+}
+label{
+    font-size: medium;
+    font-weight: 500;
+    display: inline;
+    padding: 10px;
+}
+form span{
+    color: #0050ff;
+    padding: 1px;
+    font-weight: bolder;
+}
+input:hover{
+    cursor: pointer;
+    border-bottom:solid #0050ff 3px;
+    transition: all .2s ease-in-out;
+}
+input:focus{
+    border: #0050ff;  
+}
+input:active{
+    transform: scale(1.2);
+}
+/* *:required{
+    /* border-color: goldenrod; 
+} */
+/* input:required:invalid {
+    border-color: #ff0000;
+  } */
+#fname, #lname, #email, #subject, #message {
+    position: relative;
+    margin: auto;
 }
