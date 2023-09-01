@@ -127,7 +127,7 @@ header h1 {
     position: relative;
     margin: auto;
     top: 20px;
-    max-width: 50%;
+    max-width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,9 +140,10 @@ header h1 {
 }
 .profile{
     flex: 1;
-    position: inherit;
+    position: relative;
+    top: 0px;
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: #f4ece6;
     display: flex;
     flex-direction: column;
@@ -195,7 +196,9 @@ span{
     list-style: none;
     padding: 0;
 }
-
+.socials img{
+    padding: 0px;
+}
 .socials li{
     display: block;
     float: left;
