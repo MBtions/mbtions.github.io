@@ -227,6 +227,11 @@ span{
 }
 footer{
     position: relative;
+    bottom: 0px;
+    margin-bottom: 0px;
+    
+    left: 0px;
+    right: 0px;
     padding: 8px;
     overflow: hidden;
     background-color: white;
@@ -322,12 +327,6 @@ input:focus{
 input:active{
     transform: scale(1.2);
 }
-/* *:required{
-    /* border-color: goldenrod; 
-} */
-/* input:required:invalid {
-    border-color: #ff0000;
-  } */
 #fname, #lname, #email, #subject, #message {
     position: relative;
     margin: auto;
