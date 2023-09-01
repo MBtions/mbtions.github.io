@@ -3,18 +3,18 @@ body {
     font-family: Poppins, sans-serif;
     margin: auto;
     width: 100%;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 #index{
-    background: linear-gradient(to right, #e6dace 0%, #e6dace 50%, white 50%, white 100%);
+    background: linear-gradient(to right, #e6dace 0%, #e6dace 50%, white 50%, white 100%) center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .header{
-    position: inherit;
-    top: 0;
-    padding: 10px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
     width: 100%;
     background-color: white;
     display: flex;
@@ -48,6 +48,7 @@ body {
     display: inline-flex;
     height: 15px;
     width: 15px;
+    margin-left: 5px;
     background: #0050ff;    
 }
 .nav_links{
@@ -95,7 +96,7 @@ header h1 {
     text-transform: uppercase;
     display: inline;
     border: solid black 2px;
-    /* color: #0050ff; */
+    width: 100px;
     color: black;
     padding: 2px 8px;
     font-size: small;
@@ -127,7 +128,7 @@ header h1 {
     position: relative;
     margin: auto;
     top: 20px;
-    max-width: 60%;
+    max-width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,7 +185,9 @@ span{
     padding: 10px;
 }
 .socials{
+    position:relative;
     margin: auto;
+    display: inline-flex;
     width: 100%;
     background: white;
     padding: 0;
@@ -229,14 +232,14 @@ span{
     list-style: none;
 }
 footer{
+    overflow: hidden;
     position: relative;
+    top: 50px;
     bottom: 0px;
-    margin-bottom: 0px;
-    
+    margin-bottom: 0px;    
     left: 0px;
     right: 0px;
     padding: 8px;
-    overflow: hidden;
     background-color: white;
     width: 100%;
     max-height: min-content;
@@ -244,6 +247,12 @@ footer{
     justify-content: space-between;
     align-items: center; 
     font-size: 10px;
+}
+.left p{
+    margin: 0px;
+}
+.right{
+    margin: 0px;
 }
 footer li a{
     text-decoration: none;
@@ -263,9 +272,18 @@ footer ul li{
     align-items: center;
     padding: 5px;
 }
+ul.socials li{
+    padding: 3px;
+}
+ul.connect{
+    margin: 0px;
+}
 .connect li a{
     text-decoration: none;
     color: black;
+}
+.connect li p{
+    margin-top: 10px;
 }
 .connect li ul{
     padding: 0;
