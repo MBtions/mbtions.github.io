@@ -428,9 +428,6 @@ input:active{
         display: flex;
         flex-direction: column;
     }
-    .logo span::first-letter{
-        color: transparent;
-    }
     .about-container{
         width: 80%;
         flex-direction: column;
