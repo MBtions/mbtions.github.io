@@ -336,6 +336,12 @@ ul.connect{
     font-size: 10px;
     margin: 0px;
 }
+.content-wrapper{
+    margin: 15px;
+}
+.details-container-box li{
+    margin: 5px;
+}
 input{
     border-radius: 8px;
     display: inline;
@@ -523,15 +529,19 @@ input:active{
         display: flex;
         flex-direction: column;
     }
-    #download-btn{
+    /* #download-btn{
         position: absolute;
         top: -40%;
         left: 35%;
-    }
+    } */
     header.section_title{
+        position: relative;
         display: flex;
-        flex-direction: column;
-        justify-content: stretch;
+        flex-direction: column-reverse;
+        justify-content: space-between;
         margin-bottom: 10px;
+    }
+    #slash{
+        display: none;
     }
 }
