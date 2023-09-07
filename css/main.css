@@ -416,7 +416,7 @@ input:active{
         justify-content: space-between;
         
     }
-    ul.nav_links {
+    #nav_bar {
         display: none;
     }
     /* ul.nav_links{
@@ -646,7 +646,12 @@ input:active{
         top: 200px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: stretch;
         align-items: center;
+    }
+
+    #nav_bar.open_nav li:hover{
+        color: #e6dace;
+        background: white;
     }
 }
