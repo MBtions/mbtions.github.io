@@ -12,8 +12,8 @@ Array.from(document.querySelectorAll("button")).forEach((button)=>{
             op = e.target.innerHTML
             calculation = eval(calculation);
             console.log("Res: "+eval(calculation))
-            // input.setAttribute("value", calculation);
-            input.innerHTML = calculation
+            input.setAttribute("value", calculation);
+            // input.innerHTML = calculation
             console.log("Op:"+op);
             console.log("Prev:"+prev);
         }
@@ -21,10 +21,10 @@ Array.from(document.querySelectorAll("button")).forEach((button)=>{
             calculation = ""
             op = ""
             exp = ""
-            // expression.setAttribute("value", exp);
-            // input.setAttribute("value", calculation);
-            expression.innerHTML = exp
-            input.innerHTML = calculation
+            expression.setAttribute("value", exp);
+            input.setAttribute("value", calculation);
+            // expression.innerHTML = exp
+            // input.innerHTML = calculation
             prev = calculation
             console.log("Op:"+op);
             console.log("Prev:"+prev);
@@ -35,37 +35,38 @@ Array.from(document.querySelectorAll("button")).forEach((button)=>{
                     //calculation = prev
                     calculation = calculation.slice(0, -1);
                     exp = exp.slice(0, -1);
-                    // input.setAttribute("value", calculation);
-                    // expression.setAttribute("value", exp);
-                    expression.innerHTML = exp
-                    input.innerHTML = calculation   
+                    input.setAttribute("value", calculation);
+                    expression.setAttribute("value", exp);
+                    // expression.innerHTML = exp
+                    // input.innerHTML = calculation   
                     if (input.value == "") {
                         exp = input.value
-                        // expression.setAttribute("value", exp);
-                        expression.innerHTML = exp
+                        expression.setAttribute("value", exp);
+                        // expression.innerHTML = exp
                     }
                 } 
                 else {
                     console.log("Prev:"+prev);
                     calculation = prev
-                    // input.setAttribute("value", calculation);
-                    input.innerHTML = calculation 
+                    input.setAttribute("value", calculation);
+                    // input.innerHTML = calculation 
                     op = ""
                 }
             } else {
-                // expression.setAttribute("value", "");
-                expression.innerHTML = exp
+                exp = ""
+                expression.setAttribute("value", exp);
+                // expression.innerHTML = exp
             }
         }
         else if (e.target.innerHTML === "%") {
             calculation += "/100"
             op = ""
             exp += e.target.innerHTML
-            // expression.setAttribute("value", exp);
-            expression.innerHTML = exp
+            expression.setAttribute("value", exp);
+            // expression.innerHTML = exp
             calculation = eval(calculation)
-            // input.setAttribute("value", calculation);
-            input.innerHTML = calculation 
+            input.setAttribute("value", calculation);
+            // input.innerHTML = calculation 
             prev = calculation
             console.log("Op:"+op);
             console.log("Prev:"+prev);
@@ -76,10 +77,10 @@ Array.from(document.querySelectorAll("button")).forEach((button)=>{
             console.log("Op:"+op);
             calculation += e.target.innerHTML
             exp += e.target.innerHTML
-            // expression.setAttribute("value", exp)
-            // input.setAttribute("value", calculation);
-            expression.innerHTML = exp
-            input.innerHTML = calculation
+            expression.setAttribute("value", exp)
+            input.setAttribute("value", calculation);
+            // expression.innerHTML = exp
+            // input.innerHTML = calculation
             console.log("Cal: "+calculation);
             console.log("Prev:"+prev);
         }
