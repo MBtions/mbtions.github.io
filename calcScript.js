@@ -12,7 +12,8 @@ Array.from(document.querySelectorAll("button")).forEach((button)=>{
             op = e.target.innerHTML
             calculation = eval(calculation);
             console.log("Res: "+eval(calculation))
-            input.setAttribute("value", calculation);
+            // input.setAttribute("value", calculation);
+            input.innerHTML = calculation
             console.log("Op:"+op);
             console.log("Prev:"+prev);
         }
