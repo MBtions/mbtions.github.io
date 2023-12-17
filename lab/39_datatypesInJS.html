@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding Strings And Numbers</title>
+    <script></script>
+    <style>
+      /* body {
+        display: flex;
+        justify-content: space-between;
+      } */
+      h1 {
+        text-align: center;
+      }
+      .code {
+        background-color: rgb(232, 224, 224);
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      .output {
+        color: blue;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgb(112, 113, 116);
+      }
+      button {
+        border-radius: 5px;
+        background-color: rgb(39, 104, 208);
+        color: white;
+        border: none;
+        margin-bottom: 10px;
+        padding: 5px;
+        box-shadow: 2px 2px 5px rgb(112, 113, 116);
+      }
+    </style>
+    <script>
+      let c1Run = 0,
+        c2Run = 0;
+      function out1Eval() {
+        if (c1Run === 0) {
+          document.getElementById("out1").innerHTML +=
+            "<br>" + eval(document.getElementById("in1").innerHTML);
+          c1Run = 1;
+        }
+      }
+      function out2Eval() {
+        if (c2Run === 0) {
+          document.getElementById("out2").innerHTML +=
+            "<br>" + eval(document.getElementById("in2").innerHTML);
+          c2Run = 1;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Adding Strings and Numbers</h1>
+      <div id="in1" class="code cell">"Volvo" + 6 + 14</div>
+      <div id="out1" class="output cell">
+        <button onclick="out1Eval()">Run Code</button>
+      </div>
+      <div id="in2" class="code cell">6 + 14 + "Volvo"</div>
+      <div id="out2" class="output cell">
+        <button onclick="out2Eval()">Run Code</button>
+      </div>
+    </div>
+    <div>
+      <h1>Datatypes in JavaScript</h1>
+      <h3>Numbers</h3>
+      <pre>
+        let length = 16;
+        let weight = 7.5;
+      </pre>
+      <h3>Strings</h3>
+      <pre>
+        let color = "Yellow";
+        let lastName = "Johnson";
+      </pre>
+      <h3>Booleans</h3>
+      <pre>
+        let x = true;
+        let y = false;
+      </pre>
+      <h3>Object</h3>
+      <pre>
+        const person = { firstName: "John", lastName: "Doe" };
+      </pre>
+      <h3>Array object</h3>
+      <pre>
+        const cars = ["Saab", "Volvo", "BMW"];
+      </pre>
+      <h3>Date object</h3>
+      <pre>
+        const date = new Date("2022-03-25");
+      </pre>
+    </div>
+  </body>
+</html>

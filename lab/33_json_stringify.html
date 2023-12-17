@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Example</title>
+    <style>
+      #p1 {
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Stringify</h1>
+    <p id="p1"></p>
+    <script>
+      const val = '{"name":"KIET", "age":25, "city":"GZB"}';
+      const obj = JSON.parse(val);
+      const str = JSON.stringify(obj);
+      document.getElementById("p1").innerHTML =
+        "This is a new line. <br> <br> Result of Stringify(): <br>" + str;
+    </script>
+  </body>
+</html>

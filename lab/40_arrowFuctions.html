@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Functions in JavaScript</title>
+    <style>
+      .code {
+        /* background-color: rgb(232, 224, 224);
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+         */
+        cursor: pointer;
+        color: blue;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgb(112, 113, 116);
+      }
+    </style>
+    <script>
+      function alertOutput() {
+        Array.from(document.getElementsByClassName("woutarg")).forEach(
+          (code) => {
+            code.addEventListener("click", (e) => {
+              console.log(e.target);
+              alert(eval(code.innerText)());
+            });
+          }
+        );
+      }
+      function alertvalOutput() {
+        Array.from(document.getElementsByClassName("warg")).forEach((code) => {
+          code.addEventListener("click", (e) => {
+            let val = prompt("Enter a value: ");
+            console.log(e.target);
+            alert(eval(code.innerText)(val));
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Arrow Functions in JavaScript</h1>
+    <h2>Before Arrow</h2>
+    <pre class="code woutarg" onclick="alertOutput()">
+    hello = function() {
+        return "Hello World!";
+    }
+    </pre>
+    <h2>With Arrow Functions</h2>
+    <pre class="code woutarg" onclick="alertOutput()">
+    hello = () => {
+        return "Hello World!";
+    }
+    </pre>
+    <h2>Arrow Functions Return Value By Default</h2>
+    <pre class="code woutarg" onclick="alertOutput()">
+hello = () => "Hello World!";</pre
+    >
+    <h2>Arrow Functions with Parameters</h2>
+    <pre class="code warg" onclick="alertvalOutput()">
+hello = (val) => "Hello " + val;</pre
+    >
+    <h2>Arrow Functions without Parameters</h2>
+    <pre class="code warg" onclick="alertvalOutput()">
+hello = val => "Hello " + val;</pre
+    >
+  </body>
+</html>

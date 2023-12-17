@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator by Meenakshi</title>
+    <!-- <link rel="stylesheet" href="calcStyles.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="calcScript.js"></script> -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
+      }
+
+      body {
+        background: linear-gradient(45deg, #0a0a0a, #3a4452);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .calculator {
+        border: 1px solid #717377;
+        border-radius: 1rem;
+        padding: 10px;
+        background-color: transparent;
+        box-shadow: 0px 3px 15px rgba(126, 126, 126, 0.5);
+      }
+
+      #result {
+        width: 100%;
+        border: none;
+        padding: 20px;
+        background-color: transparent;
+        color: white;
+        text-align: right;
+        font-size: xx-large;
+      }
+      #result::placeholder {
+        color: white;
+      }
+      #result:focus {
+        outline: none;
+      }
+      #expStr,
+      #expStr:focus {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        color: grey;
+        text-align: right;
+        padding: 10px;
+        font-size: x-large;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        font-size: large;
+        color: white;
+        margin: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        background-color: transparent;
+        /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.2); */
+      }
+      .operator {
+        background-color: grey;
+        border-radius: 50%;
+      }
+      .equal {
+        background-color: rgb(0, 136, 255);
+        color: white;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div>
+        <input id="expStr" type="text" placeholder="" />
+        <br />
+        <input id="result" type="text" placeholder="0" />
+      </div>
+      <div class="row">
+        <button class="operator">AC</button>
+        <button class="operator">C</button>
+        <button class="operator">%</button>
+        <button class="operator">/</button>
+      </div>
+      <div class="row">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">*</button>
+      </div>
+      <div class="row">
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="operator">-</button>
+      </div>
+      <div class="row">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="operator">+</button>
+      </div>
+      <div class="row">
+        <button>00</button>
+        <button>0</button>
+        <button>.</button>
+        <button class="equal operator">=</button>
+      </div>
+    </div>
+    <script>
+      prev = "";
+      exp = "";
+      op = "";
+      calculation = "";
+      input = document.getElementById("result");
+      expression = document.getElementById("expStr");
+      Array.from(document.querySelectorAll("button")).forEach((button) => {
+        button.addEventListener("click", (e) => {
+          console.log(e.target);
+          if (e.target.innerHTML === "=") {
+            prev = calculation;
+            op = e.target.innerHTML;
+            calculation = eval(calculation);
+            console.log("Res: " + eval(calculation));
+            input.setAttribute("value", calculation);
+            // input.innerHTML = calculation
+            console.log("Op:" + op);
+            console.log("Prev:" + prev);
+          } else if (e.target.innerHTML === "AC") {
+            calculation = "";
+            op = "";
+            exp = "";
+            expression.setAttribute("value", exp);
+            input.setAttribute("value", calculation);
+            // expression.innerHTML = exp
+            // input.innerHTML = calculation
+            prev = calculation;
+            console.log("Op:" + op);
+            console.log("Prev:" + prev);
+          } else if (e.target.innerHTML === "C") {
+            if (input.value !== "") {
+              if (op !== "=") {
+                //calculation = prev
+                calculation = calculation.slice(0, -1);
+                exp = exp.slice(0, -1);
+                input.setAttribute("value", calculation);
+                expression.setAttribute("value", exp);
+                // expression.innerHTML = exp
+                // input.innerHTML = calculation
+                if (input.value == "") {
+                  exp = input.value;
+                  expression.setAttribute("value", exp);
+                  // expression.innerHTML = exp
+                }
+              } else {
+                console.log("Prev:" + prev);
+                calculation = prev;
+                input.setAttribute("value", calculation);
+                // input.innerHTML = calculation
+                op = "";
+              }
+            } else {
+              exp = "";
+              expression.setAttribute("value", exp);
+              // expression.innerHTML = exp
+            }
+          } else if (e.target.innerHTML === "%") {
+            calculation += "/100";
+            op = "";
+            exp += e.target.innerHTML;
+            expression.setAttribute("value", exp);
+            // expression.innerHTML = exp
+            calculation = eval(calculation);
+            input.setAttribute("value", calculation);
+            // input.innerHTML = calculation
+            prev = calculation;
+            console.log("Op:" + op);
+            console.log("Prev:" + prev);
+          } else {
+            prev = calculation;
+            op = "";
+            console.log("Op:" + op);
+            calculation += e.target.innerHTML;
+            exp += e.target.innerHTML;
+            expression.setAttribute("value", exp);
+            input.setAttribute("value", calculation);
+            // expression.innerHTML = exp
+            // input.innerHTML = calculation
+            console.log("Cal: " + calculation);
+            console.log("Prev:" + prev);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

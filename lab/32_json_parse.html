@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parsing</title>
+    <style>
+      #parseDemo {
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Parsing</h1>
+    <div id="parseDemo"></div>
+    <script>
+      const txt = '{"name":"KIET MCA", "age":30, "city":"GHAZIABAD"}';
+      const obj = JSON.parse(txt); // converting JSON string to JavaScript Objects
+      document.getElementById("parseDemo").innerText =
+        obj.name + ", " + obj.age;
+    </script>
+  </body>
+</html>

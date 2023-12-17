@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let & Var</title>
+    <style>
+      #pageTitle {
+        text-align: center;
+      }
+      .error {
+        display: block;
+        background-color: brown;
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .code-block {
+        flex: 1;
+      }
+      .output-block {
+        flex: 1;
+        border-radius: 5px;
+        /* border: 2px solid black; */
+        border: none;
+        background-color: rgb(223, 231, 241);
+        padding: 5px;
+        box-shadow: 2px 2px 8px rgb(112, 113, 116);
+      }
+      .example {
+        display: flex;
+        justify-content: space-between;
+      }
+      button {
+        border-radius: 5px;
+        background-color: rgb(39, 104, 208);
+        color: white;
+        border: none;
+        padding: 10px;
+        box-shadow: 2px 2px 5px rgb(112, 113, 116);
+      }
+    </style>
+    <script>
+      let varError = "";
+      let letError = "";
+      let var_a, let_a, let_b;
+
+      function varCode() {
+        function f() {
+          // It can be accessible any
+          // where within this function
+          var a = 10;
+          console.log(a);
+          var_a = a;
+        }
+        f();
+
+        try {
+          // A cannot be accessible
+          // outside of function
+          console.log(a);
+        } catch (err) {
+          varError = err.toString();
+        }
+      }
+      function letCode() {
+        let a = 10;
+        function f() {
+          if (true) {
+            let b = 9;
+
+            // It prints 9
+            console.log(b);
+            let_b = b;
+          }
+          try {
+            // It gives error as it
+            // defined in if block
+            console.log(b);
+          } catch (err) {
+            letError = err.toString();
+          }
+        }
+        f();
+
+        // It prints 10
+        console.log(a);
+        let_a = a;
+      }
+      function varDivUpdate() {
+        varCode();
+        document.getElementById("varoutput").innerHTML = `
+              <pre class="code-block">
+          function f() {
+              // It can be accessible any
+              // where within this function
+              var a = 10;
+              console.log(a)
+          }
+          f();
+
+          // A cannot be accessible
+          // outside of function
+          console.log(a);
+              </pre>
+              <div class="output-block">
+                  <h3>Output</h3>
+                  <p>${var_a}
+                  <br>
+                  <span class="error">
+                    ${varError}
+                    <br>
+                  
+                  </span>
+              </p>
+
+              </div>
+              `;
+      }
+      function letDivUpdate() {
+        letCode();
+        document.getElementById("letoutput").innerHTML = `
+      <pre class="code-block">
+          let a = 10;
+          function f() {
+              if (true) {
+                  let b = 9
+
+                  // It prints 9
+                  console.log(b);
+              }
+
+              // It gives error as it
+              // defined in if block
+              console.log(b);
+          }
+          f()
+
+          // It prints 10
+          console.log(a)
+      </pre>
+              <div class="output-block">
+                  <h3>Output</h3>
+                  <p>${let_b}
+                  <br>
+                  <span class="error">
+                    ${letError}
+                  <br></span>
+                  ${let_a}
+              </p>
+
+              </div>
+              `;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="pageTitle">let and var in JavaScript</h1>
+    <div>
+      <h2>var keyword</h2>
+      <p>Everything in javascript is global when declared with var keyword.</p>
+      <p>
+        The var is the oldest keyword to declare a variable in JavaScript.
+        Scope: Global scoped or function scoped. The scope of the var keyword is
+        the global or function scope. It means variables defined outside the
+        function can be accessed globally, and variables defined inside a
+        particular function can be accessed within the function.
+      </p>
+      <button id="varbtn" onclick="varDivUpdate()">Var Demo</button>
+      <div id="varoutput" class="example"></div>
+    </div>
+    <div>
+      <h2>let keyword</h2>
+      <p>
+        The let keyword is an improved version of the var keyword. Scope: block
+        scoped: The scope of a let variable is only block scoped. It can’t be
+        accessible outside the particular block ({block}).
+      </p>
+      <button onclick="letDivUpdate()" id="letbtn">Let Demo</button>
+      <div id="letoutput" class="example"></div>
+    </div>
+  </body>
+</html>

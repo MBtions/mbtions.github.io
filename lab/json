@@ -1,0 +1,12 @@
+xml document is fast, portable, self-descriptive. 
+Custom tags can be created using xml.
+dtd: doc type definition
+
+then Json introduced to overcome the drawbacks of xml.
+json is lightweight and easy for human readability.
+Jquery and JSON are Js libraries.
+
+JSON strings to JS objects using parse function.
+
+stringify is used to convert JS objects to JSON strings.
+
