@@ -14,7 +14,7 @@
     <br><br>
     <input type="submit" onclick="myFunction(4, 3)">
 
-    <p id="demo">Result: </p>
+    <p id="demo">Result: <span id="result"></span></p>
     <script>
         function myFunction(p1, p2) {
             // const num1 = parseInt (prompt ("Enter the first number"));
@@ -25,7 +25,7 @@
             // add two numbers
             const sum = num1 + num2;
 
-            document.getElementById("demo").innerHTML += sum;
+            document.getElementById("result").innerHTML = sum;
         }
     </script>
 </body>
