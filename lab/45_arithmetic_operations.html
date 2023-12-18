@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling and Functions</title>
+</head>
+<body>
+    <h1></h1>
+    First name:<br>
+    <input type="text" id="firstname" value="2">
+    <br>
+    Last name: <br>
+    <input type="text" id="lastname" value="3">
+    <br><br>
+    <input type="submit" id="add" value="Add" onclick="add(4, 3)">
+    <input type="submit" id="sub" value="Subtract" onclick="sub(4, 3)">
+    <input type="submit" id="mult" value="Product" onclick="multiply(4, 3)">
+    <input type="submit" id="div" value="Division" onclick="divide(4, 3)">
+
+    <p id="demo">Result: <span id="result"></span></p>
+    <script>
+        function add(p1, p2) {
+            // const num1 = parseInt (prompt ("Enter the first number"));
+            var num1 =  parseInt(document.getElementById("firstname").value);
+            // const num2 = parseInt (prompt("Enter the second number"));
+            var num2 = parseInt(document.getElementById("lastname").value);
+
+            // add two numbers
+            const sum = num1 + num2;
+
+            document.getElementById("result").innerHTML = sum;
+        }
+        function sub(p1, p2) {
+            // const num1 = parseInt (prompt ("Enter the first number"));
+            var num1 =  parseInt(document.getElementById("firstname").value);
+            // const num2 = parseInt (prompt("Enter the second number"));
+            var num2 = parseInt(document.getElementById("lastname").value);
+
+            // subtract two numbers
+            const diff = num1 - num2;
+
+            document.getElementById("result").innerHTML = diff;
+        }
+        function multiply(p1, p2) {
+            // const num1 = parseInt (prompt ("Enter the first number"));
+            var num1 =  parseInt(document.getElementById("firstname").value);
+            // const num2 = parseInt (prompt("Enter the second number"));
+            var num2 = parseInt(document.getElementById("lastname").value);
+
+            // multiply two numbers
+            const product = num1 * num2;
+
+            document.getElementById("result").innerHTML = product;
+        }
+        function divide(p1, p2) {
+            // const num1 = parseInt (prompt ("Enter the first number"));
+            var num1 =  parseInt(document.getElementById("firstname").value);
+            // const num2 = parseInt (prompt("Enter the second number"));
+            var num2 = parseInt(document.getElementById("lastname").value);
+            let e = 0;
+            // try {
+            //     // divide two numbers
+            //     const division = num1 / num2;    
+            // } catch (err) {
+            //     e = 1;
+            //     document.getElementById("result").innerHTML = err.message;
+            // } finally {
+            //     if (e === 0) {
+            //         document.getElementById("result").innerHTML = division;
+            //     }
+            // }    
+            const division = num1 / num2;    
+            document.getElementById("result").innerHTML = division;
+        }
+    </script>
+</body>
+</html>
