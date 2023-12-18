@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch: Not Defined Function</title>
+    <style>
+        #output {
+            color: red;
+        }
+    </style>
+    <script>
+        function myFunction ()
+        {
+            try{
+                adddlert("Welcome my guest!"); // not defined
+            } catch (err) {
+                console
+                document.getElementById("output").innerHTML += err.toString();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Try Catch: Not Defined Function</h1>
+    <pre>
+        try{
+            adddlert("Welcome my guest!") // not defined
+        } catch (err) {
+            document.getElementById("demo").innerText = err.message;
+        }
+    </pre>
+    <button onclick="myFunction()">Run Code</button>
+    <p>
+        Output: <br>
+        <span id="output"></span>
+    </p>
+</body>
+</html>
