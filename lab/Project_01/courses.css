@@ -1,0 +1,36 @@
+*{
+    font-family: sans-serif;
+    color: white;
+}
+body {
+    background-color: black;
+    color: white;
+}
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.fa{
+    color: white;
+}
+footer{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer ul {
+list-style: none;
+}
+footer ul li{
+float: left;
+padding: 5px;
+margin-right: 10px;
+}
