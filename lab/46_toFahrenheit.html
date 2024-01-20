@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fahrenheit to Celsius</title>
+    <style>
+      div {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="fahrenheit">Enter Temperature in Fahrenheit:</label>
+      <br />
+      <input type="text" id="fahrenheit" />
+      <br />
+      <input type="button" value="Calculate" onclick="toCelsius(1)" />
+
+      <p id="celsius"></p>
+    </div>
+    <script>
+      function toCelsius() {
+        var fahrenheit = parseInt(document.getElementById("fahrenheit").value);
+        document.getElementById("celsius").innerHTML = Math.round(
+          (5 / 9) * (fahrenheit - 32)
+        );
+      }
+    </script>
+  </body>
+</html>
