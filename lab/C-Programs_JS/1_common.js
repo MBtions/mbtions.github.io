@@ -162,8 +162,19 @@ function mergeStringsProgram(str1, str2) {
 }
 function duplicatesInAnArrayProgram(a) {
     // console.log("Duplicates in an array Program.");
+    for (index in a) {
+        if (a[index] === ' ') {
+            a.splice(index, 1);
+        }
+    }
     str = findDuplicates(a);
-    document.getElementById("duplicatesres").innerHTML = "<p>Duplicates: "+str+"</p>";
+    if (str.length == 0) {
+        str = "<p>No Duplicates in the array!</p>";
+    }
+    else {
+        str = "<p>Duplicates: "+str+"</p>"
+    }
+    document.getElementById("duplicatesres").innerHTML = str;
 }
 function stringReverseProgram(str) {
     // console.log("Reverse of a String Program."+str);

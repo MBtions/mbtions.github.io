@@ -31,13 +31,15 @@
       .questions {
         width: 60%;
         background: white;
-        padding: 5px;
         margin: 10px;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
+      }
+      .questions p {
+        padding: 10px;
       }
       .result {
         height: 10vh;
@@ -47,6 +49,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
       }
       button {
         margin: 10px;
@@ -58,7 +62,13 @@
       }
       input {
         margin-top: 5px;
-        width: 40%;
+        width: 85%;
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        input {
+          width: 60%;
+        }
       }
     </style>
   </head>
@@ -298,6 +308,6 @@
       </button>
       <div class="result" id="strrevres"></div>
     </div>
-    <script src="1common.js"></script>
+    <script src="1_common.js"></script>
   </body>
 </html>
