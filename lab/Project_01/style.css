@@ -10,6 +10,9 @@ body {
 .fa{
   color: white;
 }
+input {
+  color: black;
+}
 nav{
   position: sticky;
   display: flex;
