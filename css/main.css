@@ -261,6 +261,7 @@ h1#hello{
     margin: auto;
     padding: 20px;
     box-shadow: 0px 10px 18px 18px rgba(100, 100, 100, 0.1);
+    border-radius: 5px;
 }
 .container-box h1{
     font-weight: bolder;
@@ -271,11 +272,31 @@ h1#hello{
 }
 .details-container-box{
     display: flex;
-    align-items: first baseline;
+    /* align-items: first baseline; */
     justify-content: space-between;
 }
 .org_details li{
     list-style: none;
+}
+.project-details{
+    
+}
+.image-preview {
+    width: 100%;
+}
+.project-preview:hover .image-preview{
+    /* opacity: 0; */
+    filter: invert();
+}
+.middle{
+    position: relative;
+    display: none;    
+}
+.project-preview:hover .middle {
+    display: flex;
+    top: -50%;
+    justify-content: center;
+    align-items: center;
 }
 footer{
     overflow: hidden;
